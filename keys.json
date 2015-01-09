@@ -1,0 +1,27 @@
+{
+	"F11": "Fullscreen",
+  	"Ctrl-P": "Edit config",
+  	"Ctrl-T": "Load next theme",
+  	"Ctrl-N": "New",
+  	"Ctrl-O": "Open",
+	"Ctrl-S": "Save",
+	"Shift-Ctrl-S": "Save as",
+
+	"Ctrl-A": "Select all",
+	"Ctrl-D": "Delete line",
+	"Ctrl-Z": "Undo",
+	"Ctrl-Y": "Redo",
+	"Ctrl-U": "Undo last change to selection",
+	"Alt-U": "Redo last change to selection",
+	"Ctrl-Up": "Go to start",
+	"Ctrl-Down": "Go to end",
+	"Alt-Left": "Go to start of line",
+	"Alt-Right": "Go to end of line",
+	"Ctrl-]": "Indent more",
+	"Ctrl-[": "Indent less",
+	"Ctrl-F": "Find",
+	"Ctrl-G": "Find next",
+	"Shift-Ctrl-G": "Find previous",
+	"Shift-Ctrl-F": "Replace",
+	"Shift-Ctrl-R": "Replace all"
+}

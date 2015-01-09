@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Zenditor</title>
+
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" href="bower_components/codemirror/lib/codemirror.css">
+	<link rel="stylesheet" href="bower_components/codemirror/addon/dialog/dialog.css">
+
+	<link rel="stylesheet" href="style.css">
+
+	<script src="bower_components/codemirror/lib/codemirror.js" defer></script>
+	<script src="bower_components/codemirror/mode/markdown/markdown.js" defer></script>
+	<script src="bower_components/codemirror/addon/dialog/dialog.js" defer></script>
+	<script src="bower_components/codemirror/addon/search/searchcursor.js" defer></script>
+	<script src="bower_components/codemirror/addon/search/search.js" defer></script>
+
+	<script src="js/Config.js" defer></script>
+	<script src="js/Editor.js" defer></script>
+	<script src="js/UI.js" defer></script>
+</head>
+<body>
+	<aside>
+		<strong id="filename"></strong><br><br>
+		Words: <span id="wordCount">0</span><br><br>
+		Reading time: <span id="readingTime">0min</span>
+	</aside>
+	<textarea></textarea>
+	<input type="file" accept=".md" id="open" />
+	<input type="file" nwsaveas accept=".md" id="saveAs" />
+</body>
+</html>

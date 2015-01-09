@@ -1,0 +1,12 @@
+{
+  "name": "zenditor",
+  "version": "0.0.1",
+  "main": "index.html",
+  "description": "Minimal editor",
+  "licenses": [
+    {
+      "type": "GPL-3.0+",
+      "url": "http://www.gnu.org/licenses/gpl.txt"
+    }
+  ]
+}
