@@ -8,5 +8,16 @@
       "type": "GPL-3.0+",
       "url": "http://www.gnu.org/licenses/gpl.txt"
     }
-  ]
+  ],
+  "window": {
+    "title": "Zenditor",
+    "icon": "icon.png",
+    "toolbar": false,
+    "frame": true,
+    "width": 800,
+    "height": 600,
+    "position": "mouse",
+    "min_width": 800,
+    "min_height": 200
+  }
 }
