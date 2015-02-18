@@ -14,6 +14,7 @@ UI.loadTheme = function(theme) {
   	css.setAttribute('href', 'bower_components/codemirror/theme/'+theme+'.css')
 	document.getElementsByTagName('head')[0].appendChild(css)
 
+	if (!theme) theme = 'mdn-like'
 	Editor.cm.setOption('theme', theme)
 	document.getElementsByTagName('aside')[0].className = 'CodeMirror cm-s-' + theme
 }
