@@ -1,4 +1,4 @@
-# Zenditor
+#Zenditor
 
 
 Minimal markdown editor for writing posts

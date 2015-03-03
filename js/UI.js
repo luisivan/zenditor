@@ -8,6 +8,12 @@ UI.fullscreen = function() {
 		document.webkitCancelFullScreen()
 }
 
+UI.cheatsheet = function() {
+	var path = global.require.main.filename.split('/')
+	path.pop()
+	gui.Shell.openExternal('file:///' + path.join('/') + '/cheatsheet.png')
+}
+
 UI.loadTheme = function(theme) {
 	var css = document.createElement('link')
   	css.setAttribute('rel', 'stylesheet')
@@ -67,6 +73,7 @@ UI.bindKeys = function() {
 	}
 
 	var keymap = {
+		'F1': UI.cheatsheet,
 	  	'F11': UI.fullscreen,
 	  	'Ctrl-P': Config.edit,
 	  	'Ctrl-T': UI.loadNextTheme,
