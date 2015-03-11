@@ -1,20 +1,25 @@
+'use strict'
+
 var fs = require('fs'),
 	gui = require('nw.gui')
 
-var Config = {},
-	_configPath = process.env['HOME'] + '/.config/zenditor/config.json'
+class Config {
+	constructor() {
+		this.path = process.env['HOME'] + '/.config/zenditor/config.json'
 
-Config.save = function() {
-	fs.writeFileSync(_configPath, JSON.stringify(Config, undefined, 2))
+		if (!fs.existsSync(this.path))
+			fs.writeFileSync(this.path, '{}')
+
+		this.props = JSON.parse(fs.readFileSync(this.path))
+	}
+	set theme(val) {
+		this.props['theme'] = val
+		this.save()
+	}
+	save() {
+		fs.writeFileSync(this.path, JSON.stringify(Config, undefined, 2))
+	}
+	edit() {
+		gui.Shell.openItem(this.path)
+	}
 }
-
-Config.edit = gui.Shell.openItem.bind(undefined, _configPath)
-
-;(function init() {
-	if (!fs.existsSync(_configPath))
-		fs.writeFileSync(_configPath, '{}')
-
-	var data = JSON.parse(fs.readFileSync(_configPath))
-	for (var prop in data)
-		Config[prop] = data[prop]
-})()

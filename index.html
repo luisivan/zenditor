@@ -19,6 +19,7 @@
 	<script src="js/Config.js" defer></script>
 	<script src="js/Editor.js" defer></script>
 	<script src="js/UI.js" defer></script>
+	<script src="js/app.js" defer></script>
 </head>
 <body>
 	<aside>
@@ -29,5 +30,13 @@
 	<textarea></textarea>
 	<input type="file" accept=".md" id="open" />
 	<input type="file" nwsaveas accept=".md" id="saveAs" />
+
+	<script>
+		var fs = require('fs')
+
+		fs.watch('./js', function() {
+			window.location.reload()
+		})
+	</script>
 </body>
 </html>
